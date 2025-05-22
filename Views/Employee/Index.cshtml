@@ -1,0 +1,86 @@
+﻿
+@model IEnumerable<Employee>
+@{
+    ViewData["Title"] = "Employee List";
+    var isLoggedIn = User?.Identity?.IsAuthenticated ?? false;
+}
+
+
+
+<div class="main-container">
+    <h2 class="glow-title">👥 Employee List</h2>
+
+    @if (isLoggedIn)
+    {
+        <div class="text-center mt-4">
+            
+            <a class="btn custom-glow-btn" asp-action="Create">+ Add New Employee</a>
+        </div>
+        <br />
+
+    }
+    else
+    {
+        <button class="glow-button" onclick="showLoginPopup()">+ Add New Employee</button>
+    }
+
+    <div class="employee-cards">
+        @foreach (var emp in Model)
+        {
+            <div class="employee-card">
+                <h4>@emp.Name</h4>
+                <p><strong>Gender:</strong> @emp.Gender</p>
+                <p><strong>Position:</strong> @emp.Position</p>
+                <div class="action-buttons">
+                    @if (isLoggedIn)
+                    {
+                        <a asp-action="Edit" asp-route-id="@emp.Id" class="neu-button warning">Edit</a>
+                        <a asp-action="Details" asp-route-id="@emp.Id" class="neu-button info">Details</a>
+                        <a asp-action="Delete" asp-route-id="@emp.Id" class="neu-button danger">Delete</a>
+                    }
+                    else
+                    {
+                        <button class="neu-button warning" onclick="showLoginPopup()">Edit</button>
+                        <button class="neu-button info" onclick="showLoginPopup()">Details</button>
+                        <button class="neu-button danger" onclick="showLoginPopup()">Delete</button>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<div id="loginPopup" class="glass-modal">
+    <h4>🔒 Login Required</h4>
+    <p>Redirecting to login in <span id="countdown">3</span> seconds...</p>
+    <button onclick="cancelRedirect()" class="neu-button">Cancel</button>
+</div>
+<div id="overlay" class="overlay"></div>
+@section Scripts {
+    <script>
+        let countdown = 3;
+        let countdownInterval;
+        function showLoginPopup() {
+            document.getElementById("loginPopup").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("countdown").innerText = countdown;
+
+            countdownInterval = setInterval(() => {
+                countdown--;
+                document.getElementById("countdown").innerText = countdown;
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "/Account/Login"; 
+                }
+            }, 1000);
+        }
+
+        function cancelRedirect() {
+            clearInterval(countdownInterval);
+            countdown = 3;
+            document.getElementById("loginPopup").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+}

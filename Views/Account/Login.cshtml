@@ -1,0 +1,60 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="card custom-card w-50 mx-auto">
+    <div class="card-header text-center text-white" style="background-color: #1A2428; border-bottom: 1px solid #00FFFF;">
+        <h3 class="mb-0">
+            <i class="bi bi-person-circle text-cyan"></i> 
+            Login to Your Account
+        </h3>
+    </div>
+
+    <div class="card-body">
+        <form asp-action="Login" class="mb-3">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RememberMe" />
+                    @Html.DisplayNameFor(model => model.RememberMe)
+                </label>
+            </div>
+
+           
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary px-4">Login</button>
+            </div>
+        </form>
+
+        <div class="text-center">
+            <p class="mb-1 text-white-50">Don't have an account?</p>
+
+            <a asp-controller="Account" asp-action="Register" class="btn btn-outline-secondary">Create an Account</a>
+        </div>
+    </div>
+
+
+
+    <a asp-controller="Account" asp-action="ExternalLogin" asp-route-provider="Google"
+       class="btn btn-google d-flex align-items-center justify-content-center">
+        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="google-logo">
+        <span>Continue with Google</span>
+    </a>
+
+
+
+</div>
