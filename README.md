@@ -126,6 +126,15 @@ Login Requre!
 
 ![image](https://github.com/user-attachments/assets/5c593c8c-a07a-4f44-86f1-50e0884109ae)
 
+Login Page With Google Login
+
+![image](https://github.com/user-attachments/assets/682db49e-b867-4678-9bf9-ea772bd0d91a)
+
+Register Page With Google Login
+
+![image](https://github.com/user-attachments/assets/71bd6286-a066-45b5-9bb6-9fa342520121)
+
+
 After Login only u can perform task,External/Google Login Also Added[OAuth}//Due to Privecy the client id and secreat cannot share in app.jason
 
 ![image](https://github.com/user-attachments/assets/ec018770-f177-435d-8cfc-97feac69728c)
