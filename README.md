@@ -109,14 +109,6 @@ Views/
 
 ---
 
-📌 Submission Info
-
-* Task approved by trainer ✅
-* Code pushed to GitHub ✅
-* GitHub link submitted via email ✅
-* Deadline Met: **22nd May 2025, 3:00 PM** ⏰
-
----
 
 📧 Contact
 
@@ -127,19 +119,33 @@ Feel free to contact me for any clarifications or walkthrough of the codebase:
 
 ---
 Dashoard!
+
 ![image](https://github.com/user-attachments/assets/d48c4021-7d57-42f9-b392-af4350f75ad7)
+
 Login Requre!
+
 ![image](https://github.com/user-attachments/assets/5c593c8c-a07a-4f44-86f1-50e0884109ae)
+
 After Login only u can perform task,External/Google Login Also Added[OAuth}//Due to Privecy the client id and secreat cannot share in app.jason
+
 ![image](https://github.com/user-attachments/assets/ec018770-f177-435d-8cfc-97feac69728c)
+
 Created with full Validation
+
 ![image](https://github.com/user-attachments/assets/84aef5e4-7f53-4b0c-a4d9-fa4d9466a1b3)
+
 Edit
+
 ![image](https://github.com/user-attachments/assets/90a3579b-37ee-426b-9c80-c8c5d1180cc0)
+
 Details
+
 ![image](https://github.com/user-attachments/assets/e2848e4d-3a3c-4481-b6f6-ceb335322527)
+
 Delete
+
 ![image](https://github.com/user-attachments/assets/062549e3-ec40-4b85-ab5d-034e131983d4)
+
 
 
 
