@@ -44,7 +44,7 @@ This project is a **CRUD web application** developed using **ASP.NET CORE MVC** 
 
  5. 🌐 Google OAuth Integration
 
-* Secure **external login using Google** configured in `Startup.cs` and via Identity.
+* Secure **external login using Google** configured in `Program.cs` and via Identity.
 * Promotes flexibility and modern login options.
 
 6. 📁 Entity Framework Core (Code First)
