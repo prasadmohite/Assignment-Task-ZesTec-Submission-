@@ -113,7 +113,7 @@ Views/
 📧 Contact
 
 Feel free to contact me for any clarifications or walkthrough of the codebase:
-**\[Your Name] - .NET Developer**
+**\Prasad Mohite. - .NET Developer**
 📧 Email: Prasadmohite0302@gmail.com
 📞 Phone: +91-9325213404
 
